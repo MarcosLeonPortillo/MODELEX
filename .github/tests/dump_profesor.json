@@ -1,0 +1,1033 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$jjLcjCBy0HUrboy4U4qkxF$FNMcd6Aw0Rg/08Dsj6e8RIcHmV0/DKRGIRkU0XMU1HM=",
+    "last_login": "2022-12-11T16:50:02.100Z",
+    "is_superuser": true,
+    "username": "eserrano",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-12-11T16:49:58.148Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$Yzr2UC2SduBmHRr82xXqu4$2MJuvEuYFedofDJMbOBiCVOykNmRV7K8jV7Vywq9/Ws=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "juan",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-12-11T16:51:21.784Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$mAGhjBFVOnL4ffX2PFDTOh$vJVMSwBd8/Dy0LAb5LRS5qQfl8A90g7bHFXKgthEXe4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "daniela",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-12-11T16:51:50.022Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$VrZMye93evdVYkw3bpD17A$6lXdMrlXSjJ6s/8g1HOEkKlLjEH2JNdmgQpw/0cD63s=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "perica",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-12-11T16:52:11.967Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$390000$aI6nFSJQrfDSf2WCR7yt3G$XqZAE34iSS/32SXUtUyolhnjALUawUCZr/zWcZFZ2ns=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "alfonso",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-12-11T16:52:44.772Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hmgpfwpijpobjp9u270un690i6e3n60b",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAGSgCX7j0DmWFAqgaS0q6Md9cmXej2v_f-S0Tc1hq3kZc4szgLEKffjTA9ctsB37Hduky9rctMclfkQYe8ds7Py-H-HVQc9VurzGAdhGK8C4aVKVoXNDDBZD0UZ5CYCQkKgcccvPWmBKIEKjltvXh_ANVuN80:1p4UjT:ZSfTpggoIQYGjquRxfgpdRdgy2zY2u6wPBOQSjYrc5g",
+    "expire_date": "2022-12-25T22:23:39.434Z"
+  }
+},
+{
+  "model": "ptpud04.usuario",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "eserrano"
+    ],
+    "saldo": "2000.55"
+  }
+},
+{
+  "model": "ptpud04.usuario",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "juan"
+    ],
+    "saldo": "100.99"
+  }
+},
+{
+  "model": "ptpud04.usuario",
+  "pk": 3,
+  "fields": {
+    "user": [
+      "daniela"
+    ],
+    "saldo": "5000.00"
+  }
+},
+{
+  "model": "ptpud04.usuario",
+  "pk": 4,
+  "fields": {
+    "user": [
+      "perica"
+    ],
+    "saldo": "10.01"
+  }
+},
+{
+  "model": "ptpud04.usuario",
+  "pk": 5,
+  "fields": {
+    "user": [
+      "alfonso"
+    ],
+    "saldo": "0.00"
+  }
+},
+{
+  "model": "ptpud04.motoelectrica",
+  "pk": 1,
+  "fields": {
+    "marca": "Derbi",
+    "modelo": "Variant",
+    "tarifa_segundo": "0.0025"
+  }
+},
+{
+  "model": "ptpud04.motoelectrica",
+  "pk": 2,
+  "fields": {
+    "marca": "Yamaha",
+    "modelo": "lenta",
+    "tarifa_segundo": "0.0001"
+  }
+},
+{
+  "model": "ptpud04.motoelectrica",
+  "pk": 3,
+  "fields": {
+    "marca": "Aprilia",
+    "modelo": "milia",
+    "tarifa_segundo": "0.0016"
+  }
+},
+{
+  "model": "ptpud04.motoelectrica",
+  "pk": 4,
+  "fields": {
+    "marca": "BMV",
+    "modelo": "Thunder",
+    "tarifa_segundo": "0.0100"
+  }
+},
+{
+  "model": "ptpud04.motoelectrica",
+  "pk": 5,
+  "fields": {
+    "marca": "Ducati",
+    "modelo": "fumato",
+    "tarifa_segundo": "0.0005"
+  }
+},
+{
+  "model": "ptpud04.motoelectrica",
+  "pk": 6,
+  "fields": {
+    "marca": "Honda",
+    "modelo": "fighter",
+    "tarifa_segundo": "0.0068"
+  }
+},
+{
+  "model": "ptpud04.motoelectrica",
+  "pk": 7,
+  "fields": {
+    "marca": "Kawasaki",
+    "modelo": "aquachirri",
+    "tarifa_segundo": "0.0002"
+  }
+},
+{
+  "model": "ptpud04.motoelectrica",
+  "pk": 8,
+  "fields": {
+    "marca": "Honda",
+    "modelo": "VIP 2000",
+    "tarifa_segundo": "5.5000"
+  }
+},
+{
+  "model": "ptpud04.alquiler",
+  "pk": 1,
+  "fields": {
+    "moto": 1,
+    "usuario": 1,
+    "inicio": "2022-12-11T16:56:00Z",
+    "fin": "2022-12-11T16:56:10Z",
+    "tarifa_segundo": "0.0025",
+    "coste_total": "0.03"
+  }
+},
+{
+  "model": "ptpud04.alquiler",
+  "pk": 2,
+  "fields": {
+    "moto": 2,
+    "usuario": 1,
+    "inicio": "2022-12-11T21:49:32Z",
+    "fin": "2022-12-11T21:49:42Z",
+    "tarifa_segundo": "0.0001",
+    "coste_total": "0.01"
+  }
+},
+{
+  "model": "ptpud04.alquiler",
+  "pk": 3,
+  "fields": {
+    "moto": 3,
+    "usuario": 1,
+    "inicio": "2022-12-11T21:55:41Z",
+    "fin": "2022-12-11T21:55:51Z",
+    "tarifa_segundo": "0.0016",
+    "coste_total": "0.02"
+  }
+},
+{
+  "model": "ptpud04.alquiler",
+  "pk": 4,
+  "fields": {
+    "moto": 4,
+    "usuario": 1,
+    "inicio": "2022-12-11T16:56:00Z",
+    "fin": "2022-12-11T16:56:20Z",
+    "tarifa_segundo": "0.0100",
+    "coste_total": "0.20"
+  }
+},
+{
+  "model": "ptpud04.alquiler",
+  "pk": 5,
+  "fields": {
+    "moto": 5,
+    "usuario": 2,
+    "inicio": "2022-12-10T22:00:30Z",
+    "fin": "2022-12-11T22:00:30Z",
+    "tarifa_segundo": "0.0005",
+    "coste_total": "43.20"
+  }
+},
+{
+  "model": "ptpud04.alquiler",
+  "pk": 6,
+  "fields": {
+    "moto": 6,
+    "usuario": 3,
+    "inicio": "2022-12-10T16:56:00Z",
+    "fin": "2022-12-11T16:56:00Z",
+    "tarifa_segundo": "0.0068",
+    "coste_total": "587.52"
+  }
+},
+{
+  "model": "ptpud04.alquiler",
+  "pk": 7,
+  "fields": {
+    "moto": 7,
+    "usuario": 3,
+    "inicio": "2022-12-11T16:56:00Z",
+    "fin": "2022-12-11T17:56:10Z",
+    "tarifa_segundo": "0.0002",
+    "coste_total": "0.73"
+  }
+},
+{
+  "model": "ptpud04.alquiler",
+  "pk": 8,
+  "fields": {
+    "moto": 7,
+    "usuario": 4,
+    "inicio": "2022-12-11T16:56:00Z",
+    "fin": "2022-12-11T17:56:10Z",
+    "tarifa_segundo": "0.0002",
+    "coste_total": "0.73"
+  }
+},
+{
+  "model": "ptpud04.alquiler",
+  "pk": 9,
+  "fields": {
+    "moto": 7,
+    "usuario": 4,
+    "inicio": "2022-12-10T16:56:00Z",
+    "fin": "2022-12-11T16:56:00Z",
+    "tarifa_segundo": "0.0020",
+    "coste_total": "17.28"
+  }
+},
+{
+  "model": "ptpud04.alquiler",
+  "pk": 10,
+  "fields": {
+    "moto": 3,
+    "usuario": 3,
+    "inicio": "2022-12-11T16:56:00Z",
+    "fin": "2022-12-11T17:56:10Z",
+    "tarifa_segundo": "0.0016",
+    "coste_total": "5.78"
+  }
+},
+{
+  "model": "ptpud04.alquiler",
+  "pk": 11,
+  "fields": {
+    "moto": 2,
+    "usuario": 2,
+    "inicio": "2022-12-10T16:56:00Z",
+    "fin": "2022-12-11T16:56:00Z",
+    "tarifa_segundo": "0.0001",
+    "coste_total": "8.64"
+  }
+},
+{
+  "model": "ptpud04.alquiler",
+  "pk": 12,
+  "fields": {
+    "moto": 3,
+    "usuario": 3,
+    "inicio": "2022-12-10T16:56:00Z",
+    "fin": "2022-12-11T16:56:00Z",
+    "tarifa_segundo": "0.0016",
+    "coste_total": "138.24"
+  }
+},
+{
+  "model": "ptpud04.alquiler",
+  "pk": 13,
+  "fields": {
+    "moto": 1,
+    "usuario": 1,
+    "inicio": "2022-12-11T16:56:00Z",
+    "fin": null,
+    "tarifa_segundo": "0.0001",
+    "coste_total": null
+  }
+},
+{
+  "model": "ptpud04.alquiler",
+  "pk": 14,
+  "fields": {
+    "moto": 5,
+    "usuario": 3,
+    "inicio": "2022-12-11T16:56:00Z",
+    "fin": null,
+    "tarifa_segundo": "0.0005",
+    "coste_total": null
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2022-12-11T16:50:28.795Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "usuario"
+    ],
+    "object_id": "1",
+    "object_repr": "eserrano",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2022-12-11T16:51:22.110Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "juan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2022-12-11T16:51:36.409Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "usuario"
+    ],
+    "object_id": "2",
+    "object_repr": "juan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2022-12-11T16:51:50.326Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "3",
+    "object_repr": "daniela",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2022-12-11T16:51:57.019Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "usuario"
+    ],
+    "object_id": "3",
+    "object_repr": "daniela",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2022-12-11T16:52:12.284Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "4",
+    "object_repr": "perica",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2022-12-11T16:52:22.303Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "usuario"
+    ],
+    "object_id": "4",
+    "object_repr": "perica",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2022-12-11T16:52:45.082Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "5",
+    "object_repr": "alfonso",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2022-12-11T16:52:54.941Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "usuario"
+    ],
+    "object_id": "5",
+    "object_repr": "alfonso",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2022-12-11T16:53:40.376Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "motoelectrica"
+    ],
+    "object_id": "1",
+    "object_repr": "Derbi Variant",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2022-12-11T16:53:57.724Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "motoelectrica"
+    ],
+    "object_id": "2",
+    "object_repr": "Yamaha lenta",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2022-12-11T16:54:33.430Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "motoelectrica"
+    ],
+    "object_id": "3",
+    "object_repr": "Aprilia milia",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2022-12-11T16:54:54.371Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "motoelectrica"
+    ],
+    "object_id": "4",
+    "object_repr": "BMV Thunder",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2022-12-11T16:55:33.449Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "motoelectrica"
+    ],
+    "object_id": "5",
+    "object_repr": "Ducati fumato",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2022-12-11T16:55:51.372Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "motoelectrica"
+    ],
+    "object_id": "6",
+    "object_repr": "Honda fighter",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2022-12-11T16:56:18.874Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "motoelectrica"
+    ],
+    "object_id": "7",
+    "object_repr": "Kawasaki aquachirri",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2022-12-11T16:58:50.163Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "alquiler"
+    ],
+    "object_id": "1",
+    "object_repr": "eserrano Derbi 2022-12-11 17:56:00+01:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2022-12-11T21:50:43.782Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "alquiler"
+    ],
+    "object_id": "2",
+    "object_repr": "eserrano Yamaha 2022-12-11 22:49:32+01:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2022-12-11T21:58:00.595Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "alquiler"
+    ],
+    "object_id": "3",
+    "object_repr": "eserrano Aprilia 2022-12-11 22:55:41+01:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2022-12-11T21:59:41.850Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "alquiler"
+    ],
+    "object_id": "4",
+    "object_repr": "eserrano BMV 2022-12-11 17:56:00+01:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2022-12-11T22:01:42.660Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "alquiler"
+    ],
+    "object_id": "5",
+    "object_repr": "juan Ducati 2022-12-10 23:00:30+01:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2022-12-11T22:03:21.411Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "alquiler"
+    ],
+    "object_id": "6",
+    "object_repr": "daniela Honda 2022-12-10 17:56:00+01:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2022-12-11T22:05:56.143Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "alquiler"
+    ],
+    "object_id": "7",
+    "object_repr": "daniela Kawasaki 2022-12-11 17:56:00+01:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2022-12-11T22:06:46.749Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "alquiler"
+    ],
+    "object_id": "8",
+    "object_repr": "perica Kawasaki 2022-12-11 17:56:00+01:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2022-12-11T22:08:10.449Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "alquiler"
+    ],
+    "object_id": "9",
+    "object_repr": "perica Kawasaki 2022-12-10 17:56:00+01:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2022-12-11T22:09:36.121Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "alquiler"
+    ],
+    "object_id": "10",
+    "object_repr": "daniela Aprilia 2022-12-11 17:56:00+01:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2022-12-11T22:11:47.324Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "alquiler"
+    ],
+    "object_id": "11",
+    "object_repr": "juan Yamaha 2022-12-10 17:56:00+01:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2022-12-11T22:13:12.843Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "alquiler"
+    ],
+    "object_id": "12",
+    "object_repr": "daniela Aprilia 2022-12-10 17:56:00+01:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2022-12-11T22:15:41.265Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "usuario"
+    ],
+    "object_id": "5",
+    "object_repr": "alfonso",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Importe\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2022-12-11T22:16:23.788Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "usuario"
+    ],
+    "object_id": "4",
+    "object_repr": "perica",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Importe\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2022-12-11T22:17:07.558Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "motoelectrica"
+    ],
+    "object_id": "8",
+    "object_repr": "Honda VIP 2000",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2022-12-11T22:23:39.419Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "1",
+    "object_repr": "eserrano",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2022-12-12T00:05:33.992Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "alquiler"
+    ],
+    "object_id": "13",
+    "object_repr": "eserrano Derbi 2022-12-11 17:56:00+01:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2022-12-12T00:08:04.478Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "alquiler"
+    ],
+    "object_id": "14",
+    "object_repr": "daniela Ducati 2022-12-11 17:56:00+01:00",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2022-12-12T00:15:17.971Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "alquiler"
+    ],
+    "object_id": "14",
+    "object_repr": "daniela Ducati 2022-12-11 17:56:00+01:00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Fin\", \"Coste total\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2022-12-12T00:20:55.035Z",
+    "user": [
+      "eserrano"
+    ],
+    "content_type": [
+      "ptpud04",
+      "alquiler"
+    ],
+    "object_id": "14",
+    "object_repr": "daniela Ducati 2022-12-11 17:56:00+01:00",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Fin\", \"Coste total\"]}}]"
+  }
+}
+]

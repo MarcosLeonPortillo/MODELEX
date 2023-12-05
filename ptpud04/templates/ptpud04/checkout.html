@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alquilar moto {{moto.pk}} - {{moto.marca}} - {{moto.modelo}}</title>
+</head>
+<body>
+<h1>Checkout</h1>
+<p>
+    Va usted a alquilar la moto {{moto.pk}} - {{moto.marca}} - {{moto.modelo}} por {{ moto.tarifa_segundo|floatformat:4 }} &euro;/segundo
+</p>
+{% if not alquilada and saldo_valido %}
+<form method="post">
+    {% csrf_token %}
+    <input type="submit" value="Alquilar">
+</form>
+{% endif %}
+
+{% if not saldo_valido %}
+<p>
+    No tiene saldo suficiente para alquilar la moto
+</p>
+{% endif %}
+
+{% if alquilada %}
+<p>
+    La moto no está disponible
+</p>
+{% endif %}
+</body>
+</html>

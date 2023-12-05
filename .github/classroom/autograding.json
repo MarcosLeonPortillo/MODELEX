@@ -1,0 +1,384 @@
+{
+  "tests": [
+    {
+      "name": "Model Usuario campo user",
+      "setup": "",
+      "run": "pytest .github/tests/test_models.py::test_model_usuario_user_field",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Model Usuairo campo saldo",
+      "setup": "",
+      "run": "pytest .github/tests/test_models.py::test_model_usuario_saldo_field",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Model usuario nombre plural",
+      "setup": "",
+      "run": "pytest .github/tests/test_models.py::test_model_usuario_verbose_name_plural",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Model usuario representacion en cadena",
+      "setup": "",
+      "run": "pytest .github/tests/test_models.py::test_model_usuario_str_representation",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Model MotoElectrica campo marca",
+      "setup": "",
+      "run": "pytest .github/tests/test_models.py::test_model_motoelectrica_marca_field",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Model MotoElectrica campo modelo",
+      "setup": "",
+      "run": "pytest .github/tests/test_models.py::test_model_motoelectrica_modelo_field",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Model MotoElectrica campo tarifa_segundo",
+      "setup": "",
+      "run": "pytest .github/tests/test_models.py::test_model_motoelectrica_tarifa_segundo_field",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Model MotoElectrica nombre singular y plural",
+      "setup": "",
+      "run": "pytest .github/tests/test_models.py::test_model_motoelectrica_verbose_names",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Model MotoElectrica representacion en cadena",
+      "setup": "",
+      "run": "pytest .github/tests/test_models.py::test_model_motoelectrica_str_representation",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Model Alquiler campo moto",
+      "setup": "",
+      "run": "pytest .github/tests/test_models.py::test_model_alquiler_moto_field",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Model Alquiler campo usuario",
+      "setup": "",
+      "run": "pytest .github/tests/test_models.py::test_model_alquiler_usuario_field",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Model Alquiler campo inicio",
+      "setup": "",
+      "run": "pytest .github/tests/test_models.py::test_model_alquiler_inicio_field",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Model Alquiler campo fin",
+      "setup": "",
+      "run": "pytest .github/tests/test_models.py::test_model_alquiler_fin_field",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Model Alquiler campo tafifa_segundo",
+      "setup": "",
+      "run": "pytest .github/tests/test_models.py::test_model_alquiler_tarifa_segundo_field",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Model Alquiler campo coste_total",
+      "setup": "",
+      "run": "pytest .github/tests/test_models.py::test_model_alquiler_coste_total_field",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Model Alquiler nombre plurar",
+      "setup": "",
+      "run": "pytest .github/tests/test_models.py::test_model_alquiler_verbose_name_plural",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Model Alquiler representacion en cadena",
+      "setup": "",
+      "run": "pytest .github/tests/test_models.py::test_model_alquiler_str_representation",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Admin model Usuario",
+      "setup": "",
+      "run": "pytest .github/tests/test_admin.py::test_usuario_model_registered",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Admin model MotoElectrica",
+      "setup": "",
+      "run": "pytest .github/tests/test_admin.py::test_moto_model_registered",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Admin model Alquiler",
+      "setup": "",
+      "run": "pytest .github/tests/test_admin.py::test_alquiler_model_registered",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Consulta top 5 motos",
+      "setup": "",
+      "run": "pytest .github/tests/test_reports.py::test_query_top_bikes",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 7
+    },
+    {
+      "name": "View top 5 motos",
+      "setup": "",
+      "run": "pytest .github/tests/test_reports.py::test_url_report_top_bikes",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "Filtro Maestro Detalle - Query con filtros vacíos",
+      "setup": "",
+      "run": "pytest .github/tests/test_reports.py::test_query_maestro_detalle_no_params",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Filtro Maestro Detalle - Query con filtros marca_modelo",
+      "setup": "",
+      "run": "pytest .github/tests/test_reports.py::test_query_maestro_detalle_marca_modelo_filter",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Filtro Maestro Detalle - Query con filtros libre_alquilada",
+      "setup": "",
+      "run": "pytest .github/tests/test_reports.py::test_query_maestro_detalle_libre_alquilada_filter",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Filtro Maestro Detalle - Query completo",
+      "setup": "",
+      "run": "pytest .github/tests/test_reports.py::test_query_maestro_detalle_completo_filter",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 4
+    },
+    {
+      "name": "Filtro Maestro Detalle - View Inicial",
+      "setup": "",
+      "run": "pytest .github/tests/test_reports.py::test_url_report_maestro_detalle",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Filtro Maestro Detalle - View Completo",
+      "setup": "",
+      "run": "pytest .github/tests/test_reports.py::test_view_maestro_detalle_completo",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Alquila Moto - Error 404 si no existe moto",
+      "setup": "",
+      "run": "pytest .github/tests/test_alquiler.py::test_alquilar_view_404",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Alquila Moto - Login requerido",
+      "setup": "",
+      "run": "pytest .github/tests/test_alquiler.py::test_alquilar_view_requires_login",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Alquila Moto - Resultado moto ocupada",
+      "setup": "",
+      "run": "pytest .github/tests/test_alquiler.py::test_alquilada_flag",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "Alquila Moto - Resultado saldo insuficiente",
+      "setup": "",
+      "run": "pytest .github/tests/test_alquiler.py::test_cliente_saldo",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "Alquila Moto - Alquiler por post correcto",
+      "setup": "",
+      "run": "pytest .github/tests/test_alquiler.py::test_alquilar_view_post",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Libera Moto - Error 404 si no existe moto",
+      "setup": "",
+      "run": "pytest .github/tests/test_alquiler.py::test_liberar_view_moto_404",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Libera Moto - Login requerido",
+      "setup": "",
+      "run": "pytest .github/tests/test_alquiler.py::test_liberar_view_requires_login",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 2
+    },
+    {
+      "name": "Libera Moto - Error 404 Moto alquilada",
+      "setup": "",
+      "run": "pytest .github/tests/test_alquiler.py::test_liberar_view_moto_esta_alquilada_404",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "Libera Moto - Error 404 Moto ajena",
+      "setup": "",
+      "run": "pytest .github/tests/test_alquiler.py::test_liberar_view_moto_ajena_404",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 3
+    },
+    {
+      "name": "Libera Moto - Liberar moto",
+      "setup": "",
+      "run": "pytest .github/tests/test_alquiler.py::test_liberar_moto",
+      "input": "",
+      "output": "",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
+    }
+  ]
+}

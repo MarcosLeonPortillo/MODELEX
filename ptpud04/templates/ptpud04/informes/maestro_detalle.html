@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maestro/Detalle</title>
+    <style>
+        table, th, td{
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+
+        td{
+            min-width: 150px;
+        }
+    </style>
+
+</head>
+<body>
+<h2>Filtro</h2>
+    <form method="get">
+        <table>
+            {{ form.as_div }}
+        </table>
+        <input type="submit" value="Filtrar" />
+        <input type="reset" value="Borrar Filtro" />
+    </form>
+    <hr/>
+<h2>Resultados</h2>
+<table >
+    <thead>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Tarifa/Segundo</th>
+    </thead>
+    <!-- TODO Aquí van tus resultados, respeta la propuesta de tabla -->
+    {% for moto in motos %}
+    <tr>
+        <td>{{ moto.marca }}</td>
+        <td>{{ moto.modelo }}</td>
+        <td style="text-align: center">{{ moto.tarifa_segundo|floatformat:4 }} &euro;</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{% url 'welcome' %}">Inicio</a>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liberar moto {{moto.pk}} - {{moto.marca}} - {{moto.modelo}}</title>
+</head>
+<body>
+<h1>Liberar</h1>
+<p>
+    Se ha liberado la moto {{moto.pk}} - {{moto.marca}} - {{moto.modelo}} 
+</p>
+<p>
+    El Alquiler ha tenido lugar entre el {{ alquiler.inicio|date:"d/m/Y - H:i:s " }} y el {{ alquiler.fin|date:"d/m/Y - H:i:s " }}
+    El usuario {{ alquiler.usuario.user.username }}  
+    ha incurrido un coste de {{ alquiler.coste_total }} &euro; 
+</p>
+<p>
+    <a href="{% url 'welcome' %}">Inicio</a>
+</p>
+</body>
+</html>

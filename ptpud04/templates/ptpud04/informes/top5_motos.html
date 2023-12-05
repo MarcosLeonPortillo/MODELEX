@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top 5 Motos</title>
+    <style>
+        table, th, td{
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+
+        td{
+            min-width: 150px;
+        }
+    </style>
+
+</head>
+<body>
+<h1>Top 5 Motos</h1>
+<table >
+    <thead>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Tarifa por segundo</th>
+        <th>Veces alquilada</th>
+    </thead>
+    <!-- TODO Aquí van tus resultados, respeta la propuesta de tabla -->
+    {% for moto in motos %}
+    <tr>
+        <td>{{ moto.marca }}</td>
+        <td>{{ moto.modelo }}</td>
+        <td style="text-align: center">{{ moto.tarifa_segundo|floatformat:4}} &euro;</td>
+        <td style="text-align: center">{{ moto.alquileres }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{% url 'welcome' %}">Inicio</a>
+</body>
+</html>
