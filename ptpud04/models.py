@@ -14,7 +14,7 @@ class Usuario(models.Model):
     user= models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     saldo=models.DecimalField(max_digits=12, decimal_places=2)
     def __str__(self):
-        return f'{user.username} - {user.first_name} {user.last_name}'
+        return f'{self.user.username} - {self.user.first_name} {self.user.last_name}'
 
     class Meta:
         verbose_name_plural = "Usuarios"
@@ -26,16 +26,17 @@ class MotoElectrica(models.Model):
     Su representación como cadena es:
     <marca> - <modelo>
     """
-    id = models.IntegerField()
+    id = models.AutoField(primary_key=True)
     marca = models.CharField(max_length=50)
     modelo = models.CharField(max_length=50)
     tarifa_segundo = models.DecimalField(max_digits=6, decimal_places=4)
+
     class Meta:
         verbose_name = "Moto Electrica"
         verbose_name_plural = "Motos Electricas"
 
     def __str__(self):
-        return f'{moto.marca} - {moto.modelo}'
+        return f'{self.marca} - {self.modelo}'
 
 
 
@@ -52,7 +53,7 @@ class Alquiler(models.Model):
     tarifa_segundo = models.DecimalField(max_digits=6, decimal_places=4)
     coste_total = models.DecimalField(max_digits=12, decimal_places=2, blank=True, null=True)
     def __str__(self):
-        return f'{alquiler.usuario.user.username} {alquiler.moto.marca} {alquiler.inicio}'
+        return f'{self.usuario.user.username} {self.moto.marca} {self.inicio}'
 
     class Meta:
         verbose_name_plural = "Alquileres"
