@@ -1,6 +1,16 @@
 import datetime
 import math
 import pytz
+from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib import messages
+from django.shortcuts import render, get_object_or_404, redirect
+from django.utils import timezone
+from django.db import transaction
+from .models import Usuario, MotoElectrica, Alquiler
+from django.db.models import Count, Sum
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required, user_passes_test
+from django.db import transaction
 
 from django.shortcuts import render
 
@@ -58,14 +68,18 @@ def top5_moto_report():
     pass
 
 
-def query_top5_motos():
+def query_top5_motos(request):
     """ 
     El método debe devolver un objeto de tipo QuerySet a partir del Model MotoElectrica.
     Se requiere que la consulta devuelva la cantidad de veces que ha sido
     alquilada cada moto en un campo llamado 'alquileres'
     Se espera el uso de la función annotate
     """
-    return None
+    top_alquiler = Alquiler.objects.annotate(total_units_purchased=Count('id')).order_by(
+        '-total_units_purchased')[:5]
+    return render(request, 'tienda/checkout.html', {'top_alquiler': top_alquiler})
+
+
 
 
 #Espacio para la vista alquilar
