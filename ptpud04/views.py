@@ -26,7 +26,7 @@ def maestro_detalle_report(request):
     marca_modelo = request.GET.get('marca_modelo', '')
     libre_alquilada = request.GET.get('libre_alquilada', '')
     motos = query_maestro_detalle(marca_modelo, libre_alquilada)
-    return render(request, 'ptpud04/informes/maestro_detalle.html', {'motos': motos})
+    return render(request, 'ptpud04/informes/maestro_detalle.html', {'motos': motos, 'marca_modelo': marca_modelo, 'libre_alquilada': libre_alquilada})
 
 
 def query_maestro_detalle(marca_modelo, libre_alquilada):
@@ -68,12 +68,12 @@ def query_top5_motos():
 
 
 # Espacio para la vista alquilar
-def alquilar():
+def alquilar(request, pk):
     pass
 
 
 # Espacio para la vista liberar
-def liberar(request):
+def liberar(request, pk):
     moto_id = request.GET.get('moto_id')
     alquiler_id = request.GET.get('alquiler_id')
 
