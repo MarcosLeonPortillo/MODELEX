@@ -26,7 +26,6 @@ class MotoElectrica(models.Model):
     Su representación como cadena es:
     <marca> - <modelo>
     """
-    id = models.AutoField(primary_key=True)
     marca = models.CharField(max_length=50)
     modelo = models.CharField(max_length=50)
     tarifa_segundo = models.DecimalField(max_digits=6, decimal_places=4)

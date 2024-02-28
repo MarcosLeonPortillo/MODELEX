@@ -3,15 +3,15 @@ import math
 import pytz
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import messages
+from django.http import Http404
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from django.db import transaction
 from .models import Usuario, MotoElectrica, Alquiler
-from django.db.models import Count, Sum
+from django.db.models import Count, Sum, Q
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.db import transaction
-
 from django.shortcuts import render
 
 
@@ -22,94 +22,85 @@ def welcome(request):
 
 
 # Espacio para la vista maestro_detalle
-def maestro_detalle_report():
-    pass
+def maestro_detalle_report(request):
+    marca_modelo = request.GET.get('marca_modelo', '')
+    libre_alquilada = request.GET.get('libre_alquilada', '')
+    motos = query_maestro_detalle(marca_modelo, libre_alquilada)
+    return render(request, 'ptpud04/informes/maestro_detalle.html', {'motos': motos})
 
 
 def query_maestro_detalle(marca_modelo, libre_alquilada):
-    """ 
-    El método debe devolver un objeto de tipo QuerySet a partir del parámetro
-    motos.
-    Se requiere que la consulta devuelva las motos que cumplan los siguientes criterios:
-    - Si se ha introducido un valor en el campo marca_modelo, se debe filtrar por marca o modelo
-    - Si se ha seleccionado la opción 'Libre', se deben devolver las motos que no estén alquiladas
-    - Si se ha seleccionado la opción 'Alquilada', se deben devolver las motos que estén alquiladas
-    - Si no se ha seleccionado ninguna opción, se deben devolver todas las motos
-    - Ayudas: Se puede usar la función Q para construir la consulta. 
-      Puede resultar de ayuda el método distinct() si se producen resultados duplicados
-      Puede resultar de ayuda el método exclude() para sacar de la consulta
-      resultados que cumplan una condición.
-      Manual: DB - Consultas - Búsqueda compleja con consultas Q
-      Si quiero los usuarios cuyo nombre empieza por A o por B:
-        filtro = Q(nombre__startswith='A') | Q(nombre__startswith='B'
-        Usuario.objects.filter(filtro)
-    """
-    return None
+    query = Q()
+
+    if marca_modelo:
+        query |= Q(marca__icontains=marca_modelo) | Q(modelo__icontains=marca_modelo)
+
+    if libre_alquilada == 'libre':
+        query &= Q(alquiler__isnull=True)
+    elif libre_alquilada == 'alquilada':
+        query &= Q(alquiler__isnull=False)
+
+    motos = MotoElectrica.objects.filter(query).distinct()
+    return motos
 
 
 # Espacio para la vista top3_cliente
-def top3_cliente_report():
-    pass
+def top3_cliente_report(request):
+    clientes = query_top3_clientes()
+    return render(request, 'ptpud04/informes/top3_clientes.html', {'clientes': clientes})
 
 
 def query_top3_clientes():
-    """ 
-    El método debe devolver un objeto de tipo QuerySet a partir del Model Usuario.
-    Se requiere que la consulta devuelva la suma del coste de los alquileres 
-    de cada cliente en un campo llamado 'sum_alquileres'
-    y el número de alquileres en un campo llamado 'alquileres'
-    Se espera el uso de la función annotate
-    """
-    return None
+    return Usuario.objects.annotate(
+        sum_alquileres=Sum('alquiler__coste'),
+        alquileres=Count('alquiler')
+    ).order_by('-sum_alquileres')[:3]
 
 
 # Espacio para la vista top5_moto
-def top5_moto_report():
-    pass
+def top5_moto_report(request):
+    motos = query_top5_motos()
+    return render(request, 'ptpud04/informes/top5_motos.html', {'motos': motos})
 
 
-def query_top5_motos(request):
-    """ 
-    El método debe devolver un objeto de tipo QuerySet a partir del Model MotoElectrica.
-    Se requiere que la consulta devuelva la cantidad de veces que ha sido
-    alquilada cada moto en un campo llamado 'alquileres'
-    Se espera el uso de la función annotate
-    """
-    top_alquiler = Alquiler.objects.annotate(total_units_purchased=Count('id')).order_by(
-        '-total_units_purchased')[:5]
-    return render(request, 'tienda/checkout.html', {'top_alquiler': top_alquiler})
+def query_top5_motos():
+    return MotoElectrica.objects.annotate(alquileres=Count('alquiler')).order_by('-alquileres')[:5]
 
 
-
-
-#Espacio para la vista alquilar
+# Espacio para la vista alquilar
 def alquilar():
     pass
- 
- 
+
+
 # Espacio para la vista liberar
-def liberar():
-    """
-    Pistas:
-    - Los errores se devuelven a través del objeto Http404
-    - El método deve devolver al template los objetos moto y alquiler
-    - Se debe usar una función de redondeo ya proporcionada en el código
-    - Las fechas deben de tener timezones y no ser "naive" para ello
-      se puede usar la función pytz.utc.localize({datetime_object})
-    
-    """
-    pass
+def liberar(request):
+    moto_id = request.GET.get('moto_id')
+    alquiler_id = request.GET.get('alquiler_id')
+
+    try:
+        moto = MotoElectrica.objects.get(pk=moto_id)
+        alquiler = Alquiler.objects.get(pk=alquiler_id)
+
+        if alquiler.moto != moto or alquiler.devuelta:
+            raise Http404("La moto o el alquiler no son válidos.")
+
+        # Realizar las operaciones necesarias para liberar la moto
+        alquiler.devuelta = True
+        alquiler.fecha_devolucion = timezone.now()
+        alquiler.coste = round_up(
+            (alquiler.fecha_devolucion - alquiler.fecha_alquiler).total_seconds() * moto.tarifa_segundo
+        )
+        alquiler.save()
+
+        messages.success(request, f"Se ha liberado la moto {moto.marca} {moto.modelo}. Coste: {alquiler.coste}€.")
+    except MotoElectrica.DoesNotExist:
+        raise Http404("La moto no existe.")
+    except Alquiler.DoesNotExist:
+        raise Http404("El alquiler no existe.")
+
+    return redirect('ptpud04:index')
+
 
 def round_up(value, decimals=2):
-    """
-    Rounds up a given value to the specified number of decimal places.
-
-    Args:
-        value (float): The value to be rounded up.
-        decimals (int, optional): The number of decimal places to round up to. Defaults to 2.
-
-    Returns:
-        float: The rounded up value.
-    """
     multiplier = 10 ** decimals
     return math.ceil(value * multiplier) / multiplier
